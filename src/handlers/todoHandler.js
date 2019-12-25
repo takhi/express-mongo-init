@@ -8,7 +8,7 @@ todoHandler.addTodo = async function(request, response) {
     const result = await todo.save();
     response.json(result);
   } catch (err) {
-    console.log("[ERROR][todoHandler] unable to add item");
+    console.log("[ERROR][todoHandler] unable to add document");
     response.sendStatus(500);
   }
 };
@@ -29,7 +29,7 @@ todoHandler.getTodo = async function(request, response) {
     const result = await Todo.find({ user });
     response.json(result);
   } catch (err) {
-    console.log("[ERROR][todoHandler] unable to fetch item");
+    console.log("[ERROR][todoHandler] unable to fetch document");
     response.sendStatus(404);
   }
 };
@@ -40,7 +40,7 @@ todoHandler.editTodo = async function(request, response) {
     const result = await Todo.findByIdAndUpdate({ _id: id }, { isDone: true });
     response.json(result);
   } catch (err) {
-    console.log("[ERROR][todoHandler] unable to edit item");
+    console.log("[ERROR][todoHandler] unable to edit document");
     response.sendStatus(404);
   }
 };
