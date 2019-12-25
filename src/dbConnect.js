@@ -11,7 +11,7 @@ async function connect() {
 			useFindAndModify: false
 		});
 	} catch (err) {
-		console.log("[ERROR][dbConnect] Db connection");
+		console.log("[ERROR][dbConnect] Db connection failed");
 	}
 }
 
