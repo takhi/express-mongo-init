@@ -1,5 +1,5 @@
 {
-  "name": "micro-service-express-init",
+  "name": "express-mongo-init",
   "version": "1.0.0",
   "author": "Minh Huynh",
   "main": "src/server.js",
