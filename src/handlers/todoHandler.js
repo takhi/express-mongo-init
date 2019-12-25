@@ -14,7 +14,6 @@ todoHandler.addTodo = async function(request, response) {
 };
 
 todoHandler.getTodos = async function(request, response) {
-  const { user } = request.params;
   try {
     const result = await Todo.find();
     response.json(result);
