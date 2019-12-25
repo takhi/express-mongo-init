@@ -13,7 +13,7 @@ todoHandler.addTodo = async function(request, response) {
   }
 };
 
-todoHandler.getTodos = async function(request, response) {
+todoHandler.getAllTodos = async function(request, response) {
   try {
     const result = await Todo.find();
     response.json(result);
