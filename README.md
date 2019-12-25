@@ -6,17 +6,6 @@ _____._.______  .____/\ .___.__  .___
   |   ||___|   ||      \|___|   ||   |
   |___|    |___||___\  /    |___||___|
                      \/               
-├── src
-│   ├── handlers
-│   │   └── todoHandler.js
-│   ├── models
-│   │   └── TodoModel.js
-│   ├── routes
-│   │   └── todoRoute.js
-│   ├── dbConnect.js
-│   └── server.js
-├── README.md
-└── package.json
 
 | API                    | Description        | Request body | Response body  |
 |------------------------|--------------------|--------------|----------------|
