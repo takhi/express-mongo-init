@@ -6,8 +6,6 @@ _____._.______  .____/\ .___.__  .___
   |   ||___|   ||      \|___|   ||   |
   |___|    |___||___\  /    |___||___|
                      \/               
-</pre>                                      
-```
 ├── src
 │   ├── handlers
 │   │   └── todoHandler.js
@@ -19,7 +17,6 @@ _____._.______  .____/\ .___.__  .___
 │   └── server.js
 ├── README.md
 └── package.json
-```
 
 | API                    | Description        | Request body | Response body  |
 |------------------------|--------------------|--------------|----------------|
@@ -27,3 +24,4 @@ _____._.______  .____/\ .___.__  .___
 | GET /v1/api/todo/:user | Get all user todos | none         | Array of todos |
 | POST /v1/api/todo      | Add new todo       | todo         | todo           |
 | PUT /v1/api/todo/:id   | Set todo as done   | none         | todo           |
+</pre>                                      
