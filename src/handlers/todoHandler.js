@@ -19,7 +19,7 @@ todoHandler.getTodos = async function(request, response) {
     const result = await Todo.find();
     response.json(result);
   } catch (err) {
-    console.log("[ERROR][todoHandler] unable fetch collection");
+    console.log("[ERROR][todoHandler] unable to fetch collection");
     response.sendStatus(500);
   }
 };
@@ -30,7 +30,7 @@ todoHandler.getTodo = async function(request, response) {
     const result = await Todo.find({ user });
     response.json(result);
   } catch (err) {
-    console.log("[ERROR][todoHandler] unable fetch item");
+    console.log("[ERROR][todoHandler] unable to fetch item");
     response.sendStatus(404);
   }
 };
@@ -41,7 +41,7 @@ todoHandler.editTodo = async function(request, response) {
     const result = await Todo.findByIdAndUpdate({ _id: id }, { isDone: true });
     response.json(result);
   } catch (err) {
-    console.log("[ERROR][todoHandler] unable edit item");
+    console.log("[ERROR][todoHandler] unable to edit item");
     response.sendStatus(404);
   }
 };
