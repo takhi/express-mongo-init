@@ -5,8 +5,9 @@ const todoHandler = {};
 todoHandler.addTodo = async function(request, response) {
   const todo = new Todo(request.body);
   try {
-    const result = await todo.save();
-    response.json(result);
+    response.json(
+      await todo.save()
+    );
   } catch (err) {
     console.log("[ERROR][todoHandler] unable to add document");
     response.sendStatus(500);
@@ -15,8 +16,9 @@ todoHandler.addTodo = async function(request, response) {
 
 todoHandler.getAllTodos = async function(request, response) {
   try {
-    const result = await Todo.find();
-    response.json(result);
+    response.json(
+      await Todo.find()
+    );
   } catch (err) {
     console.log("[ERROR][todoHandler] unable to fetch collection");
     response.sendStatus(500);
@@ -26,8 +28,9 @@ todoHandler.getAllTodos = async function(request, response) {
 todoHandler.getTodo = async function(request, response) {
   const { user } = request.params;
   try {
-    const result = await Todo.find({ user });
-    response.json(result);
+    response.json(
+      await Todo.find({ user })
+    );
   } catch (err) {
     console.log("[ERROR][todoHandler] unable to fetch document");
     response.sendStatus(404);
@@ -37,8 +40,12 @@ todoHandler.getTodo = async function(request, response) {
 todoHandler.editTodo = async function(request, response) {
   const { id } = request.params;
   try {
-    const result = await Todo.findByIdAndUpdate({ _id: id }, { isDone: true });
-    response.json(result);
+    response.json(
+      await Todo.findByIdAndUpdate(
+        { _id: id },
+        { isDone: true }
+      )
+    );
   } catch (err) {
     console.log("[ERROR][todoHandler] unable to edit document");
     response.sendStatus(404);
