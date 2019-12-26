@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 
 const dbConnect = require("./dbConnect");
 const todoRoute = require("./routes/todoRoute");
@@ -9,6 +10,7 @@ dbConnect();
 
 const app = express();
 
+app.use(cors({ maxAge: 86400 }));
 app.use(express.json());
 app.use("/v1/api", todoRoute());
 
